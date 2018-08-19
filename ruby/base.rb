@@ -30,3 +30,11 @@ end
 
 puts person.inspect # like OC `description`, `inspect` can display what object contains
 
+# 2>
+# `<=>`, this method is used to determine the relationship between two values
+# if left > right, thie method return 1; if left == right, this method return 0; otherwise return -1.
+# so this method can use in `case` statement.
+
+# 3>
+# `bsearch`, this method can use in Array, use binary search to improve time complexity.
+# so when your care about method run time, your should use `bsearch` instead of `find`.
