@@ -38,3 +38,11 @@ puts person.inspect # like OC `description`, `inspect` can display what object c
 # 3>
 # `bsearch`, this method can use in Array, use binary search to improve time complexity.
 # so when your care about method run time, your should use `bsearch` instead of `find`.
+
+# 4>
+# `times`, integer can call this method, behave like for loop, receive a block, repeat execute block multiple times.
+2.times do 
+	puts "repeat log content"
+end 
+3.times { puts "repeat log content again"}
+
