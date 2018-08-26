@@ -16,6 +16,13 @@ str3 = str1.clone
 str2.insert(0, "My name is ")
 puts "str = #{str1}, str2 = #{str2}, str3 = #{str3}" # when str2 change, str1 also be changed, but str3 is str1's copy version, so str3 won't be changed
 
+# 3>
+# in ruby get a substring have two methods
+substring1 = str3[8,5] # this version mean substring index start from 8, and substring length is 5
+substring2 = str3[8..12] # this version mean substring index end from 8 to 12
+puts "substring1 = #{substring1}, substring2 = #{substring2}"
+
+
 # <Method>
 # 1>
 # `tap`, i think tap is like a `block`, receive a variable is its caller, then in block do something about caller, finally return caller.
@@ -45,4 +52,6 @@ puts person.inspect # like OC `description`, `inspect` can display what object c
 	puts "repeat log content"
 end 
 3.times { puts "repeat log content again"}
+
+
 
