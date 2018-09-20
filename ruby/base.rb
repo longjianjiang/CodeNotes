@@ -53,5 +53,11 @@ puts person.inspect # like OC `description`, `inspect` can display what object c
 end 
 3.times { puts "repeat log content again"}
 
+# 5>
+# `nil?`, this method can can determine if an object is null
+# nil in ruby is a instance of class `NilClass`, like the common error we see:
+# undefined method `val' for nil:NilClass (NoMethodError)
 
+# 6>
+# `empty?`, in ruby, String, Hash, Array can use this method to determine if an object is empty.
 
