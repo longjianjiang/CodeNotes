@@ -56,8 +56,62 @@ end
 # 5>
 # `nil?`, this method can can determine if an object is null
 # nil in ruby is a instance of class `NilClass`, like the common error we see:
-# undefined method `val' for nil:NilClass (NoMethodError)
+# <undefined method `val' for nil:NilClass (NoMethodError)>
 
 # 6>
 # `empty?`, in ruby, String, Hash, Array can use this method to determine if an object is empty.
+
+# 7>
+# in ruby, function parameters passing is reference copy, so how can we implement like cpp `reference parameters`
+# for example, we need to write a function to swap two number's value, in ruby we will use `eval` and `binding`
+def swap(a, b, vars)
+	tmp = a
+	eval "a = b", vars
+	eval "b = #{tmp}", vars
+
+	# a will be a's value, b will be b's value
+	# cause this execute environment is different from binding encapsulated environment
+	# so at binding encapsulated environment, a will be b's value, b will be a's value
+	# because eval exe "a = ..", "b = ..", so you pass parameter name must equal a or b, otherwise it will not work.
+	puts a 
+	puts b
+end
+
+a, b = 5, 7
+swap(a, b, binding)
+puts "a = #{a}, b = #{b}"
+
+swap_a, swap_b = 1, 2
+swap(swap_a, swap_b, binding)
+puts "swap_a = #{swap_a}, swap_b = #{swap_b}"
+puts "============================================"
+# as we can see, this version of swap only work when parameters name as same as function parameters's name.
+# i print value in swap method, you will see, function parameter's value didn't change at all.
+# why? `eval "a = b", binding`;
+# `eval` can execute a string as a regular statement at current environment, and return as result. eval also can have second parameter like binding.
+# `binding` can encapsulate execution context at some particular place in the code and retain this context for future use,
+# so, eval can receive a binding parameter,it indicates that the environment for this execution is the environment of the function caller, as same as `binding` encapsulated environment.
+def swap_version2(a, b, vars)
+	old_a = eval a, vars
+	old_b = eval b, vars
+    eval "#{a} = #{old_b}", vars
+	eval "#{b} = #{old_a}", vars
+	
+	# this method parameter type is String
+	# eval use #{}, eval "#{a} = ..", "#{b} = ..", so parameter name can be any other string. 
+	puts a 
+	puts b
+end 
+num1, num2 = 10, 20
+swap_version2("num1", "num2", binding)
+puts num1
+puts num2
+
+p = 5
+q = 7
+eval "p = q", binding
+puts p 
+puts q 
+
+
 
