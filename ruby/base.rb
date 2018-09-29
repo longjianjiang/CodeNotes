@@ -115,3 +115,25 @@ puts q
 
 
 
+# <Other>
+# 1> script related
+# we want to execute ruby script like sheel script, just take the following steps
+
+# 1> add this line
+
+#!/usr/bin/env ruby
+
+# 2> write your ruby code, if you want to run sheel command like git, you just `sheel command`
+
+# puts "enter commit message"
+# commit_msg = gets.chomp
+# commit_command = "git commit -m '#{commit_msg}' "
+
+# `git add .`
+# `#{commit_command}`
+# `git push origin master`
+
+
+# 3> run command make ruby script as a executable file, just run ./test.rb
+
+# chmod +x test.rb
