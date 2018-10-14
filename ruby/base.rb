@@ -113,6 +113,26 @@ eval "p = q", binding
 puts p 
 puts q 
 
+# 8>
+# `sort`, we can use `sort` method sort a list using custom sort rule.
+before_sort_list = [3,30,34,5,9]
+f = ->(a, b) { a <=> b }
+cf = ->(a, b) { b + a <=> a + b }
+after_sort_list = before_sort_list.sort(&f)
+custom_sort_list = before_sort_list.map(&:to_s).sort(&cf)
+puts before_sort_list.inspect
+puts after_sort_list.inspect
+puts custom_sort_list.inspect
+# f is like cpp `compare` method, tell sort method sort rule. but in ruby use `<=>` method instead of return bool.
+
+# 9>
+# `map`, we can use `map` method to make list item make change.
+mf = ->(num) { num.to_s }
+after_map_list = before_sort_list.map(&mf) #before_sort_list.map(&:to_s) #before_sort_list.map { |num| num.to_s }
+puts after_map_list.inspect
+# & is represent block's parameter |num| 
+# &mf => as same as `sort` compare parameter
+# &: =>  as same as num.to_s
 
 
 # <Other>
