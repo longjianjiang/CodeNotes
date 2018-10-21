@@ -135,6 +135,11 @@ puts after_map_list.inspect
 # &: =>  as same as num.to_s
 
 
+# <Range>
+# 0..2 mean range from 0 to 2
+# 0...2 mean range from 0 ro 1
+
+
 # <Other>
 # 1> script related
 # we want to execute ruby script like sheel script, just take the following steps
