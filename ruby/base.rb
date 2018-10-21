@@ -45,6 +45,12 @@ puts person.inspect # like OC `description`, `inspect` can display what object c
 # 3>
 # `bsearch`, this method can use in Array, use binary search to improve time complexity.
 # so when your care about method run time, your should use `bsearch` instead of `find`.
+# `bsearch` uses block's result as a hint which part of array (left or right side) should be chosen for searching on next iteration. 
+# If block returns 0 it will stop searching, return result.
+# If it returns less then 0 it will go left otherwise it goes right 
+# finally, it find target return target, otherwise return nil
+list = [0, 0, 1, 2]
+puts list.bsearch { |i| 2 <=> i } # must put target left of the spaceship
 
 # 4>
 # `times`, integer can call this method, behave like for loop, receive a block, repeat execute block multiple times.
