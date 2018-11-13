@@ -22,6 +22,12 @@ substring1 = str3[8,5] # this version mean substring index start from 8, and sub
 substring2 = str3[8..12] # this version mean substring index end from 8 to 12
 puts "substring1 = #{substring1}, substring2 = #{substring2}"
 
+# 4>
+# in ruby string's match method use regular expression to do match thing.
+# if match method returns a value, the operation succeeded. Otherwise, will return nil.
+single_char_str = "-"
+puts single_char_str.match(/[a-zA-Z0-9]/) # this regular expression use to match a single char is alphanumeric characters
+puts /[a-zA-Z0-9]/.match(single_char_str) # as same as above
 
 # <Method>
 # 1>
