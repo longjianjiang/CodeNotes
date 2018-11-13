@@ -23,11 +23,12 @@ substring2 = str3[8..12] # this version mean substring index end from 8 to 12
 puts "substring1 = #{substring1}, substring2 = #{substring2}"
 
 # 4>
-# in ruby string's match method use regular expression to do match thing.
-# if match method returns a value, the operation succeeded. Otherwise, will return nil.
-single_char_str = "-"
-puts single_char_str.match(/[a-zA-Z0-9]/) # this regular expression use to match a single char is alphanumeric characters
-puts /[a-zA-Z0-9]/.match(single_char_str) # as same as above
+# in ruby use `sub`, `gsub`, `sub!`, `gsub!` method replace characters in a string based on a Regexp.
+# `sub` replaces only the first match, `gsub` replaces all matches. if not match just return original string.
+# `sub!` and `gsub!` do same thing, but also change original string with replaced string when match sucess.
+need_replace_str = "b0j"
+puts need_replace_str.sub(/[0-9]/, "$")
+puts need_replace_str.gsub(/[0-9]/, "$")
 
 # <Method>
 # 1>
@@ -151,9 +152,22 @@ puts after_map_list.inspect
 # 0..2 mean range from 0 to 2
 # 0...2 mean range from 0 ro 1
 
+# <Regular Expression>
+# in ruby we write regular expression like `/[a-zA-Z0-9]/`, string inside // should be escaped.
+# we can use operator `=~` or `match` method to do pattern matching, the order of string and Regexp do not matter.
+# 1> `=~` will return index of first match in string, otherwise will nil.
+# 2> match will return a `MatchData` object like Array that contain one match result, otherwise will nil.
+# in ruby string's match method use regular expression to do match thing.
+# if match method returns a value, the operation succeeded. Otherwise, will return nil.
+single_char_str = "-"
+reg_exp_1 = "57".match(/[a-zA-Z0-9]/) # this regular expression use to match a single char is alphanumeric characters
+reg_exp_2 = "57" =~ /[a-zA-Z0-9]/
+puts reg_exp_1
+puts reg_exp_2
+
 
 # <Other>
-# 1> script related
+# <1> script related
 # we want to execute ruby script like sheel script, just take the following steps
 
 # 1> add this line

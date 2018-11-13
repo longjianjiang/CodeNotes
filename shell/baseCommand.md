@@ -53,3 +53,8 @@ display bytes
 display words
 
 `ls -l | grep ^- | wc -l` mean calculate current directory files count.
+
+## mv
+
+mv command use to move file to another directory(also can use to rename directory)
+
