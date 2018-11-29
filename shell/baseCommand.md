@@ -1,5 +1,11 @@
 > i recorded the shell commands i usually used, if forgot come here to see.
 
+```
+Every shell script first line is `#!/bin/bash` indicate script enviroment.
+
+use `chomd +x name.sh` make script executable.
+```
+
 ## ls
 
 ls command show file and directory at specific file location.
