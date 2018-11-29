@@ -64,3 +64,20 @@ display words
 
 mv command use to move file to another directory(also can use to rename directory)
 
+## tr(translate)
+
+tr command use to delete or replace content.
+
+`echo a b c | tr " " "\n"` mean replace " " with "\n".
+
+## while read line do {} done
+
+The example below shows the content("aaa bbb ccc") line by line.
+
+```
+content="aaa bbb ccc"
+echo $content | tr " " "\n" | while read line
+do
+   echo $line
+done
+```
