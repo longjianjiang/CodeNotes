@@ -81,3 +81,18 @@ do
    echo $line
 done
 ```
+## if then fi
+
+The example below prints only lines with a line number greater than 1.
+
+```
+content="aaa bbb ccc"
+i=0
+echo $content | tr " " "\n" | while read line
+do
+   if (($i > 0)) then
+      echo $line
+   fi
+   i=$(($i+1))
+done
+```
