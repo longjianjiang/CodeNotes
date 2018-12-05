@@ -1,2 +1,3 @@
 # CodeNotes
-Write note for different language
+
+Just my daily development and study notes.
