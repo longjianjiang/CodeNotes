@@ -64,6 +64,10 @@ display words
 
 mv command use to move file to another directory(also can use to rename directory)
 
+## cp
+
+cp command use to copy file to another directory.
+
 ## tr(translate)
 
 tr command use to delete or replace content.
