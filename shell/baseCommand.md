@@ -100,3 +100,17 @@ do
    i=$(($i+1))
 done
 ```
+
+## curl
+
+curl use to send request.
+
+- GET
+
+curl https://domain.com/path?para=xxx
+
+- POST
+
+json parameters: curl -d '{"key": "value"}' -H "Content-Type: application/json" -X POST https://domain.com/path
+
+x-www-form-urlencoded parameters: curl -d "key&value" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://domain.com/path
