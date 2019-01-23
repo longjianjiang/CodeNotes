@@ -64,6 +64,8 @@ display words
 
 mv command use to move file to another directory(also can use to rename directory)
 
+`mv tcp_note* ~/path` mean move file name prefix is tcp_note to the custom path.
+
 ## cp
 
 cp command use to copy file to another directory.
