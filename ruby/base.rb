@@ -1,5 +1,10 @@
 # At here, i write some basic grammar about ruby that different from `C Language`
 
+# in ruby while loop will not treat zero is false, so the following code will cause endless loop.
+# while Array.new().length()
+# 	puts "======="
+# end
+
 # <String>
 # 1>
 # formatted string in ruby
