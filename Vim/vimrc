@@ -1,0 +1,29 @@
+" Vim Config
+
+" indent
+
+set smartindent
+set autoindent
+set tabstop=4
+set shiftwidth=4
+
+" inoremap
+
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap < <><LEFT>
+inoremap kj <Esc>
+
+" strict
+
+" close mouse
+set mouse-=a
+
+" close direction key
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
