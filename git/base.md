@@ -34,6 +34,8 @@ git config user.email
 
 ```
 ssh-keygen -t rsa -C 'brucejiang5.7@gmail.com'
+
+Enter file in which to save the key (/Users/zl/.ssh/id_rsa): right now we can write different names for different hosts.
 ```
 
 we use ssh-keygen to generate a public key avoid enter password.

@@ -35,6 +35,17 @@ need_replace_str = "b0j"
 puts need_replace_str.sub(/[0-9]/, "$")
 puts need_replace_str.gsub(/[0-9]/, "$")
 
+# <Array>
+# 1>
+# in td_arr_1, change one of item will affect all array in two dimensional array.
+td_arr_1 = Array.new(2, Array.new(2, 0))
+td_arr_2 = Array.new(2) { Array.new(2, 0) }
+td_arr_1[0][0] = 1
+td_arr_2[0][0] = 1
+puts td_arr_1.inspect
+puts td_arr_2.inspect
+
+
 # <Method>
 # 1>
 # `tap`, i think tap is like a `block`, receive a variable is its caller, then in block do something about caller, finally return caller.
