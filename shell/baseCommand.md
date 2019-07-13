@@ -38,9 +38,21 @@ recursively list subdirectories encountered.
 
 ## grep
 
-grep command use specific regular expression to filter the line that we want.
+grep command use specific regular expression to filter the line that we want, and we can appoint specific serach path.
+
+grep command have several option:
+
+- `-r`
+
+recursively search path.
+
+- `-n` 
+
+display line number.
 
 `grep ^-` mean display line that has `-` prefix.
+
+`grep -rn "unordered_set" *` mean search for the current directory and its subdirectory files containing the "unordered_set".
 
 ## wc
 
