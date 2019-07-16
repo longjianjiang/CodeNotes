@@ -128,3 +128,9 @@ curl https://domain.com/path?para=xxx
 json parameters: curl -d '{"key": "value"}' -H "Content-Type: application/json" -X POST https://domain.com/path
 
 x-www-form-urlencoded parameters: curl -d "key&value" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://domain.com/path
+
+## cat
+
+`cat -n filepath` mean print the contents of the file and the line number to std output.
+
+`cat oneFilePath anotherFilePath` mean copy the contents of the file to another file.
