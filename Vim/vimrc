@@ -80,3 +80,6 @@ augroup END
 " ultisnips
 let g:UltiSnipsJumpForwardTrigger="<tab>" 
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" delete not work https://www.smslit.top/2016/11/27/vim-backspace-invalid/
+set backspace=2
