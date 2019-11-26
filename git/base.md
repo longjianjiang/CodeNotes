@@ -105,6 +105,6 @@ have two ahead, one behind;
 c0 -> c1 -> c2 -> c4 -> c3'(as same as c3, only the hash value is different)
 ```
 
-have one ahead;
+have one ahead;(will always one ahead)
 
 [ref](https://segmentfault.com/q/1010000012762602)
