@@ -83,3 +83,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " delete not work https://www.smslit.top/2016/11/27/vim-backspace-invalid/
 set backspace=2
+
+" plug"
+call plug#begin('~/.vim/plugged')
+Plug 'tomasr/molokai'
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'SirVer/ultisnips'
