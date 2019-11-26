@@ -71,3 +71,40 @@ last, we can test is success:
 ```
 ssh -T git@github.com
 ```
+
+# merge related
+
+```
+c0 -> c1 -> c2 -> c3 (master)
+			|
+			v
+			c4 (feat)
+```
+
+feat branch want to merge master, have three choices:
+
+## merge
+
+```
+c0 -> c1 -> c2 -> c4 -> c5(merge commit)
+```
+
+will fine;
+
+## rebase
+
+```
+c0 -> c1 -> c2 -> c3 -> c4'(as same as c4, only the hash value is different)
+```
+
+have two ahead, one behind;
+
+## cherry-pick
+
+```
+c0 -> c1 -> c2 -> c4 -> c3'(as same as c3, only the hash value is different)
+```
+
+have one ahead;
+
+[ref](https://segmentfault.com/q/1010000012762602)
