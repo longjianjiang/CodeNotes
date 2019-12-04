@@ -123,3 +123,9 @@ git branch -r; // show remote branch;
 git remote show origin; // show remote origin, remote branch msg;
 git remote prune origin; // delete remote repo have deleted branch;
 ```
+
+```
+git branch -d name; // delete local branch;
+git branch -D name; // force delete local branch(not fully merged, squash commit);
+git push origin --delete name; // delete remote branch;
+```
