@@ -114,3 +114,12 @@ have one ahead;(will always one ahead)
 # diff
 
 [ref](https://blog.csdn.net/Jeffxu_lib/article/details/86589070)
+
+# branch related
+
+```
+git branch -a; // show local and remote branch;
+git branch -r; // show remote branch;
+git remote show origin; // show remote origin, remote branch msg;
+git remote prune origin; // delete remote repo have deleted branch;
+```
