@@ -129,3 +129,10 @@ git branch -d name; // delete local branch;
 git branch -D name; // force delete local branch(not fully merged, squash commit);
 git push origin --delete name; // delete remote branch;
 ```
+
+# log
+
+```
+it log --stat; // show statistics;
+git show commitId; // show commit detail;
+```
