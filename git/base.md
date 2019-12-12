@@ -99,6 +99,8 @@ c0 -> c1 -> c2 -> c3 -> c4'(as same as c4, only the hash value is different)
 
 have two ahead, one behind;
 
+need `git push --force`.
+
 ## cherry-pick
 
 ```
@@ -108,3 +110,29 @@ c0 -> c1 -> c2 -> c4 -> c3'(as same as c3, only the hash value is different)
 have one ahead;(will always one ahead)
 
 [ref](https://segmentfault.com/q/1010000012762602)
+
+# diff
+
+[ref](https://blog.csdn.net/Jeffxu_lib/article/details/86589070)
+
+# branch related
+
+```
+git branch -a; // show local and remote branch;
+git branch -r; // show remote branch;
+git remote show origin; // show remote origin, remote branch msg;
+git remote prune origin; // delete remote repo have deleted branch;
+```
+
+```
+git branch -d name; // delete local branch;
+git branch -D name; // force delete local branch(not fully merged, squash commit);
+git push origin --delete name; // delete remote branch;
+```
+
+# log
+
+```
+it log --stat; // show statistics;
+git show commitId; // show commit detail;
+```
