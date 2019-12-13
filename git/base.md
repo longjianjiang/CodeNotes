@@ -115,6 +115,10 @@ have one ahead;(will always one ahead)
 
 [ref](https://blog.csdn.net/Jeffxu_lib/article/details/86589070)
 
+```
+git diff --cached; // show diff when files be staged;
+```
+
 # branch related
 
 ```
