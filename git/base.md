@@ -136,3 +136,14 @@ git push origin --delete name; // delete remote branch;
 it log --stat; // show statistics;
 git show commitId; // show commit detail;
 ```
+
+# hunk
+
+[ref1](https://stackoverflow.com/questions/1981830/undo-part-of-unstaged-changes-in-git)
+[ref2](https://stackoverflow.com/questions/10605405/what-does-each-of-the-y-n-q-a-d-k-j-j-g-e-stand-for-in-context-of-git-p)
+
+```
+git add -p; // choose individual hunks to add to stages;
+git checkout -p; // choose individual hunks to discard that not staged;
+git reset -p; // choose individual hunks to become unStaged;
+```
