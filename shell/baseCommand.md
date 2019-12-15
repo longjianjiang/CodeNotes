@@ -130,6 +130,7 @@ json parameters: curl -d '{"key": "value"}' -H "Content-Type: application/json" 
 x-www-form-urlencoded parameters: curl -d "key&value" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://domain.com/path
 
 [ref](http://www.ruanyifeng.com/blog/2011/09/curl.html)
+[ref](https://aiezu.com/article/linux_curl_http_cookie.html)
 
 ## cat
 
