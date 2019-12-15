@@ -129,6 +129,8 @@ json parameters: curl -d '{"key": "value"}' -H "Content-Type: application/json" 
 
 x-www-form-urlencoded parameters: curl -d "key&value" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://domain.com/path
 
+[ref](http://www.ruanyifeng.com/blog/2011/09/curl.html)
+
 ## cat
 
 `cat -n filepath` mean print the contents of the file and the line number to std output.
