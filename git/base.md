@@ -155,3 +155,10 @@ git add -p; // choose individual hunks to add to stages;
 git checkout -p; // choose individual hunks to discard that not staged;
 git reset -p; // choose individual hunks to become unStaged;
 ```
+
+# remote
+
+```
+git remote update origin --prune // refresh origin branch
+```
+
