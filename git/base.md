@@ -162,3 +162,9 @@ git reset -p; // choose individual hunks to become unStaged;
 git remote update origin --prune // refresh origin branch
 ```
 
+
+# commit 
+
+```
+git commit --amend 可以对上一次的提交做修改
+```
