@@ -82,6 +82,14 @@ mv command use to move file to another directory(also can use to rename director
 
 cp command use to copy file to another directory.
 
+`cp -a /source/. /dest` mean copy source directory files to dest directory.
+
+## rm
+
+rm command use to delete files.
+
+`rm -rf dir` mean force recursively delete directory contents.
+
 ## tr(translate)
 
 tr command use to delete or replace content.
