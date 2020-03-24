@@ -168,3 +168,10 @@ git remote update origin --prune // refresh origin branch
 ```
 git commit --amend 可以对上一次的提交做修改
 ```
+
+# submodule
+
+
+```
+git submodule update --init --recursive; // fetch all submodules
+```
