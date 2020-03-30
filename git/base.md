@@ -115,6 +115,10 @@ have one ahead;(will always one ahead)
 
 [ref](https://blog.csdn.net/Jeffxu_lib/article/details/86589070)
 
+```
+git diff --cached; // show diff when files be staged;
+```
+
 # branch related
 
 ```
@@ -130,9 +134,44 @@ git branch -D name; // force delete local branch(not fully merged, squash commit
 git push origin --delete name; // delete remote branch;
 ```
 
+```
+git checkout -b local_branch_name origin/remote_branch_name; // create a branch and track remote branch;
+```
+
 # log
 
 ```
 it log --stat; // show statistics;
 git show commitId; // show commit detail;
+```
+
+# hunk
+
+[ref1](https://stackoverflow.com/questions/1981830/undo-part-of-unstaged-changes-in-git)
+[ref2](https://stackoverflow.com/questions/10605405/what-does-each-of-the-y-n-q-a-d-k-j-j-g-e-stand-for-in-context-of-git-p)
+
+```
+git add -p; // choose individual hunks to add to stages;
+git checkout -p; // choose individual hunks to discard that not staged;
+git reset -p; // choose individual hunks to become unStaged;
+```
+
+# remote
+
+```
+git remote update origin --prune // refresh origin branch
+```
+
+
+# commit 
+
+```
+git commit --amend 可以对上一次的提交做修改
+```
+
+# submodule
+
+
+```
+git submodule update --init --recursive; // fetch all submodules
 ```

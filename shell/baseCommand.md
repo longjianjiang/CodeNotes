@@ -82,6 +82,14 @@ mv command use to move file to another directory(also can use to rename director
 
 cp command use to copy file to another directory.
 
+`cp -a /source/. /dest` mean copy source directory files to dest directory.
+
+## rm
+
+rm command use to delete files.
+
+`rm -rf dir` mean force recursively delete directory contents.
+
 ## tr(translate)
 
 tr command use to delete or replace content.
@@ -128,6 +136,29 @@ curl https://domain.com/path?para=xxx
 json parameters: curl -d '{"key": "value"}' -H "Content-Type: application/json" -X POST https://domain.com/path
 
 x-www-form-urlencoded parameters: curl -d "key&value" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://domain.com/path
+
+- cookie
+
+Chrome Console Network right click one request, can copy cURL request str;
+
+cookie file format:
+
+```
+.douban.com	TRUE	/	FALSE	1485507337	bid	"WASIURtSGKN"
+```
+
+domain;
+tailmatch; <<<
+path;
+secure; // send cookie only https request;
+expire;
+name;
+value;
+
+`curl -b cookie.txt url | python -m json.tool`
+
+[ref](https://curl.haxx.se/docs/http-cookies.html)
+[ref](https://aiezu.com/article/linux_curl_http_cookie.html)
 
 ## cat
 
