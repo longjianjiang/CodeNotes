@@ -138,6 +138,10 @@ git push origin --delete name; // delete remote branch;
 git checkout -b local_branch_name origin/remote_branch_name; // create a branch and track remote branch;
 ```
 
+```
+git branch -m oldname newname; // modify local branch name;
+```
+
 # log
 
 ```
