@@ -103,6 +103,8 @@ need `git push --force`.
 
 ## cherry-pick
 
+[ref](http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
+
 ```
 c0 -> c1 -> c2 -> c4 -> c3'(as same as c3, only the hash value is different)
 ```
