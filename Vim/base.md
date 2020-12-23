@@ -15,6 +15,15 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 Then use `:PlugInstall` to install plugin.
 
+# Vimium
+
+```
+`ge` : edit address;
+`gi` : edit textfield;
+```
+
+[ref](https://www.zhihu.com/question/23483616)
+
 # References
 
 [http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html](http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html)
