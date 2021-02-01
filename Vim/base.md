@@ -22,7 +22,16 @@ Then use `:PlugInstall` to install plugin.
 `gi` : edit textfield;
 ```
 
-[ref](https://www.zhihu.com/question/23483616)
+## copy text
+
+```
+1. `/`: enter search mode;
+2. `return`
+3. `v`: enter visual mode select more related text;
+4. `cmd + c`
+```
+
+[more shortcut](https://www.zhihu.com/question/23483616)
 
 # References
 
