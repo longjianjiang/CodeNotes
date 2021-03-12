@@ -33,6 +33,12 @@ Then use `:PlugInstall` to install plugin.
 
 [more shortcut](https://www.zhihu.com/question/23483616)
 
+# Shortcut
+
+```
+:%s/s1/s2 => 将全部s1替换成s2
+```
+
 # References
 
 [http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html](http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html)
