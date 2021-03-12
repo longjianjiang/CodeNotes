@@ -45,12 +45,13 @@ void show_arr_two_dimensional(vector<vector<int>> arr) {
 }
 endsnippet
 
-snippet ln  
+snippet ln
 struct ListNode {
-	int val;
-	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
-};
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 endsnippet
 
 snippet tn
