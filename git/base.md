@@ -179,9 +179,18 @@ git commit --amend 可以对上一次的提交做修改
 
 can use rebase to change commit msg in origin branch. [ref](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2)
 
-# submodule
+---
 
+```
+git show // show latest commit content;
+git show commitId // show commit context; 
+git show commitId fileName
+```
+
+# submodule
 
 ```
 git submodule update --init --recursive; // fetch all submodules
+
+git clone --recurse-submodules // fetch all submodules
 ```
