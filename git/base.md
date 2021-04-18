@@ -194,3 +194,10 @@ git submodule update --init --recursive; // fetch all submodules
 
 git clone --recurse-submodules // fetch all submodules
 ```
+
+# tag
+
+```
+git tag -d tag_name;
+git push origin :refs/tags/tag_name
+```
