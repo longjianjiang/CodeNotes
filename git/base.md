@@ -72,6 +72,12 @@ last, we can test is success:
 ssh -T git@github.com
 ```
 
+遇到无法push的时候，查看remote地址是不是git@github这种的，不是的话重新设置一下。
+
+```
+git remote set-url origin git@github.com:lut/EvolutionApp.git
+```
+
 # merge related
 
 ```
