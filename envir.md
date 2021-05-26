@@ -49,3 +49,12 @@ rvm remove 2.6.3
 defaults write com.apple.finder AppleShowAllFiles -bool true;
 KillAll Finder
 ```
+
+# zsh 环境变量
+
+```
+vim $HOME/.zshrc
+export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
+```
+
+重启终端后，生效。
