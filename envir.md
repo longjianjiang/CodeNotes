@@ -43,6 +43,12 @@ rvm list
 rvm remove 2.6.3
 ```
 
+# Pod
+
+```
+sudo gem install cocoapods
+```
+
 # 隐藏文件
 
 ```
