@@ -72,10 +72,20 @@ last, we can test is success:
 ssh -T git@github.com
 ```
 
+---
+
 遇到无法push的时候，查看remote地址是不是git@github这种的，不是的话重新设置一下。
 
 ```
 git remote set-url origin git@github.com:lut/EvolutionApp.git
+```
+
+---
+
+遇到[too open](https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error) 错误，执行文件读取权限。
+
+```
+chmod 600 ~/.ssh/id_rsa_github
 ```
 
 # merge related
