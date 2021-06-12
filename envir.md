@@ -64,3 +64,7 @@ export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
 ```
 
 重启终端后，生效。
+
+# 更新zshrc
+
+更新完zshrc，执行 `source ~/.zshrc` 刷新。
