@@ -2,7 +2,7 @@
 
 `vim-plug` is a vim plugin manager. 
 
-Add a section use to install plugin at `~/.vimrc`, below is my installed plugin:
+Add a section use to install plugin at `~/vimrc`, below is my installed plugin:
 
 ```
 call plug#begin('~/.vim/plugged')
