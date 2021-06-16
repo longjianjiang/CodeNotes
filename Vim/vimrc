@@ -1,16 +1,45 @@
-" Vim Config
-
-" indent
-
-set smartindent
-set autoindent
+"set nocompatible              " be iMproved, required
+filetype on " required
 set tabstop=4
 set shiftwidth=4
+set autoindent
+set smartindent
+"set cindent
 
-" inoremap => insert no recursion map
+" completion
+
+set completeopt=longest,menu
+
+" strict
+
+" close mouse
+set mouse-=a
+
+" close direction key
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
+
+" inoremap
+
+inoremap <s-cr> <ESC>la
+inoremap kj <Esc>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+" inoremap < <><LEFT>
 
 function! RemovePairs()
-	let s:line = getline(".")
+    let s:line = getline(".")
     let s:previous_char = s:line[col(".")-1]
 
     if index(["(","[","{"],s:previous_char) != -1
@@ -34,59 +63,68 @@ function! RemovePairs()
     end
 endfunction
 
-function! RemoveNextDoubleChar(char)
-	let l:line = getline(".")
-	let l:next_char = l:line[col(".")]
-
-	if a:char == l:next_char
-		execute "normal! l"
-	else
-		execute "normal! i" . a:char . ""
-	end
-endfunction
-
 inoremap <BS> <ESC>:call RemovePairs()<CR>a
-inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
-inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
-inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
-inoremap > <ESC>:call RemoveNextDoubleChar('>')<CR>a
 
-" <Esc>la => jump out of parentheses
-inoremap ( ()<LEFT>
-inoremap [ []<LEFT>
-inoremap { {}<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap < <><LEFT>
-inoremap kj <ESC>
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" strict
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'SirVer/ultisnips'
 
-" close mouse
-set mouse-=a
+call vundle#end()            " required
 
-" close direction key
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
+filetype plugin indent on    " required
 
-" close markdown syntax
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
-" ultisnips
-let g:UltiSnipsJumpForwardTrigger="<tab>" 
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" delete not work https://www.smslit.top/2016/11/27/vim-backspace-invalid/
-set backspace=2
+syntax on
+set nu
+set ai
+set ruler
 
-" plug"
-call plug#begin('~/.vim/plugged')
-Plug 'tomasr/molokai'
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'SirVer/ultisnips'
+
+" NERDTree config
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"map F2 to open NERDTree
+map <F2> :NERDTreeToggle<CR>
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax=1
+
+"在注释输入中也能补全
+let g:ycm_complete_in_comments=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=1
+
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'nerdtree' : 1,
+      \}
+
+" 设置默认的.ycm_extra_conf.py文件
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_cache_omnifunc=0
+let g:ycm_server_keep_logfiles = 1
