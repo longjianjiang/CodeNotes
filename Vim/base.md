@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
 ```
 
 > `nerdtree` plugin need type `:NERDTree` to launch.
