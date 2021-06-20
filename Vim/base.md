@@ -45,6 +45,13 @@ Then use `:PlugInstall` to install plugin.
 :%s/s1/s2 => 将全部s1替换成s2
 ```
 
+# Copy
+
+选中某段文本后使用`y`，可以在vim文件中进行`p`复制。
+选中某段文本后使用`"+y`，可以复制到系统的剪切板。
+
+在`~/.vimrc` 加入 `set clipboard=unnamed` 可以实现y, p, command+c, command+v 混用。
+
 # References
 
 [http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html](http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html)
