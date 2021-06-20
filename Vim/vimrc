@@ -18,6 +18,9 @@ set mouse-=a
 " 解决插入模式下delete/backspce键失效问题
 set backspace=2
 
+" 解决使用p 和command+c 混合使用复制/粘贴
+set clipboard=unnamed
+
 " close direction key
 map <Left> <Nop>
 map <Right> <Nop>
