@@ -2,6 +2,11 @@
 
 `vim-plug` is a vim plugin manager. 
 
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 Add a section use to install plugin at `~/vimrc`, below is my installed plugin:
 
 ```
