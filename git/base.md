@@ -163,8 +163,9 @@ git branch -m oldname newname; // modify local branch name;
 # log
 
 ```
-it log --stat; // show statistics;
+git log --stat; // show statistics;
 git show commitId; // show commit detail;
+git log -p; // show every commit detail;
 ```
 
 # hunk
