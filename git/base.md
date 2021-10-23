@@ -218,3 +218,10 @@ git clone --recurse-submodules // fetch all submodules
 git tag -d tag_name;
 git push origin :refs/tags/tag_name
 ```
+
+# conflict
+
+```
+git checkout --theirs path/to/file
+git checkout --ours path/to/file
+```
