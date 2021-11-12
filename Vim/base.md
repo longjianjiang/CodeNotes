@@ -52,6 +52,10 @@ Then use `:PlugInstall` to install plugin.
 
 在`~/.vimrc` 加入 `set clipboard=unnamed` 可以实现y, p, command+c, command+v 混用。
 
+# iterm2 单词回退设置
+
+[ref](https://blog.csdn.net/skyyws/article/details/78480132)
+
 # References
 
 [http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html](http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html)

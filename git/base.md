@@ -225,3 +225,7 @@ git push origin :refs/tags/tag_name
 git checkout --theirs path/to/file
 git checkout --ours path/to/file
 ```
+
+# 复制最新的commit id
+
+git log -1 --pretty=format:%h | pbcopy
