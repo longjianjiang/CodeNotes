@@ -6,3 +6,5 @@ alias unsetproxy='unset ALL_PROXY'
 # application alias
 
 alias vs='open -a "Visual Studio Code"'
+alias cc='git log -1 --pretty=format:%h | pbcopy'
+
