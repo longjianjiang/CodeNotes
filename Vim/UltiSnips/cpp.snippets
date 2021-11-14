@@ -25,10 +25,11 @@ void unit_test() {
 endsnippet
 
 snippet sa
-void show_arr_one_dimensional(vector<int> arr) {
+template<typename T>
+void show_arr_one_dimensional(vector<T> arr) {
 	cout << "[";
 	for (int i = 0; i < arr.size(); ++i) {
-		int num = arr[i];
+		T num = arr[i];
 		if (i == arr.size()-1) {
 			cout << num;
 		} else {
@@ -38,7 +39,8 @@ void show_arr_one_dimensional(vector<int> arr) {
 	cout << "]\n";
 }
 
-void show_arr_two_dimensional(vector<vector<int>> arr) {
+template<typename T>
+void show_arr_two_dimensional(vector<vector<T>> arr) {
 	for (auto v: arr) {
 		show_arr_one_dimensional(v);
 	}
