@@ -229,3 +229,5 @@ git checkout --ours path/to/file
 # 复制最新的commit id
 
 git log -1 --pretty=format:%h | pbcopy
+
+git log | grep commit | head -n1 | awk '{print $2}' // 打印出最新的一条commit id
