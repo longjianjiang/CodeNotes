@@ -231,3 +231,13 @@ git checkout --ours path/to/file
 git log -1 --pretty=format:%h | pbcopy
 
 git log | grep commit | head -n1 | awk '{print $2}' // 打印出最新的一条commit id
+
+# add
+
+提交某个文件的部分提交；
+
+```
+git add -p file;
+```
+
+[ref](https://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git)
