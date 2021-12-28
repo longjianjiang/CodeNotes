@@ -184,7 +184,7 @@ puts reg_exp_2
 
 # <Other>
 # <1> script related
-# we want to execute ruby script like sheel script, just take the following steps
+# we want to execute ruby script like shell script, just take the following steps
 
 # 1> add this line
 
