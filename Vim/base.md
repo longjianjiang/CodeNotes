@@ -74,3 +74,4 @@ Then use `:PlugInstall` to install plugin.
 # References
 
 [http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html](http://wsztrush.github.io/%E5%B7%A5%E5%85%B7/2015/06/10/VIM.html)
+[https://github.com/ruanyf/articles/blob/master/dev/vim/operation.md](https://github.com/ruanyf/articles/blob/master/dev/vim/operation.md)
