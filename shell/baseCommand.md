@@ -165,3 +165,7 @@ value;
 `cat -n filepath` mean print the contents of the file and the line number to std output.
 
 `cat oneFilePath anotherFilePath` mean copy the contents of the file to another file.
+
+## more references
+
+[ref](https://www.jianshu.com/p/d9ec00d28237)
