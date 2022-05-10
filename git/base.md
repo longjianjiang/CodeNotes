@@ -241,3 +241,12 @@ git add -p file;
 ```
 
 [ref](https://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git)
+
+# stash
+
+```
+git stash save 'message';
+git stash list;
+git stash apply; // 应用存储，不会删除记录
+git stash pop; // 删除工作区
+```
