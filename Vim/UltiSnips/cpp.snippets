@@ -11,6 +11,22 @@ snippet head
 using namespace std;
 endsnippet
 
+snippet mrc
+int rows = matrix.size();
+if (rows == 0) { return 0; }
+int cols = matrix[0].size();
+if (cols == 0) { return 0; }
+
+for (int x = 0; x < rows; ++x) {
+	for (int y = 0; y < cols; ++y) {
+	}
+}
+endsnippet
+
+snippet $pair
+vector<pair<int, int>> edges = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+endsnippet
+
 snippet main
 int main() {
 	unit_test();
