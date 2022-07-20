@@ -71,4 +71,7 @@ export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
 
 # pb
 
-[ref](https://stackoverflow.com/questions/21775151/installing-google-protocol-buffers-on-mac)
+[install](https://stackoverflow.com/questions/21775151/installing-google-protocol-buffers-on-mac)
+
+[pb convert objc](https://developers.google.com/protocol-buffers/docs/reference/objective-c-generated)
+
