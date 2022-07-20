@@ -68,3 +68,7 @@ export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
 # 更新zshrc
 
 更新完zshrc，执行 `source ~/.zshrc` 刷新。
+
+# pb
+
+[ref](https://stackoverflow.com/questions/21775151/installing-google-protocol-buffers-on-mac)
