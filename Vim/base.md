@@ -70,6 +70,10 @@ Then use `:PlugInstall` to install plugin.
 ^ + y （粘贴）
 ^ + h 删除光标之前的字符
 
+# 分屏
+
+:sp filename：上下分割打开新文件
+:vsp filename：水平分割打开新文件
 
 # References
 
