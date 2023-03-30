@@ -88,6 +88,30 @@ git remote set-url origin git@github.com:lut/EvolutionApp.git
 chmod 600 ~/.ssh/id_rsa_github
 ```
 
+---
+
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.
+Please contact your system administrator.
+Add correct host key in /Users/xmly/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/xmly/.ssh/known_hosts:2
+Host key for github.com has changed and you have requested strict checking.
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists
+```
+
+这个错误需要在known_hosts里面删除uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.记录，下次push的时候会进行重新添加host。
+
 # merge related
 
 ```
