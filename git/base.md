@@ -272,5 +272,7 @@ git add -p file;
 git stash save 'message';
 git stash list;
 git stash apply; // 应用存储，不会删除记录
-git stash pop; // 删除工作区
+git stash pop; // 应用存储，并且删除记录
+git stash clear; // 删除所有记录
+git stash drop stash@{0}; // 删除某个记录
 ```
