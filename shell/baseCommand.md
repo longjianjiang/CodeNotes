@@ -36,6 +36,10 @@ recursively list subdirectories encountered.
 
 `ls -lF ~` mean display ~ location file and dicrectory contain file property.
 
+## find
+
+find /path/to/your/folder -type f -name "*layout*"
+
 ## grep
 
 grep command use specific regular expression to filter the line that we want, and we can appoint specific serach path.
