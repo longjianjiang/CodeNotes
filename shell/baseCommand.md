@@ -40,6 +40,8 @@ recursively list subdirectories encountered.
 
 find /path/to/your/folder -type f -name "*layout*"
 
+find /path/to/folder -type f -delete // 删除目录下所有文件，保留当前文件夹，不会报文件数量过多的错误
+
 ## grep
 
 grep command use specific regular expression to filter the line that we want, and we can appoint specific serach path.
