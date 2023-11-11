@@ -112,6 +112,24 @@ and the repository exists
 
 这个错误需要在known_hosts里面删除uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.记录，下次push的时候会进行重新添加host。
 
+---
+
+遇到
+
+```
+git@gitlab.xxx.com: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+fatal: Could not read from remote repository.
+```
+
+需要在.ssh/config中对每个host添加rsa算法声明，如下:
+
+```
+HostkeyAlgorithms +ssh-rsa  # 使 openssh 支持 rsa 算法
+PubkeyAcceptedAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+```
+[ref](https://blog.csdn.net/qq_53528578/article/details/120897053)
+
 # merge related
 
 ```
