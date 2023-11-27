@@ -294,3 +294,10 @@ git stash pop; // 应用存储，并且删除记录
 git stash clear; // 删除所有记录
 git stash drop stash@{0}; // 删除某个记录
 ```
+
+# clean
+
+```
+git clean -n; // 查看工作区中所有没有被跟踪的文件；
+git clean -f; // 删除工作区中所有没有被跟踪的文件；
+```
