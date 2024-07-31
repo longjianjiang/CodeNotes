@@ -77,3 +77,10 @@ export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
 
 xxx
 
+# 备忘录
+
+操作步骤
+找到备忘录存储的路径“/Users/xxx/Library/Group Containers/group.com.apple.notes”，xxx是用户名。但是在该目录下没有找到对应的备忘录内容文件。其实这些备忘录内容是被存储在sqllist数据库。
+
+所以，我们想要批量将旧电脑上的备忘录拷贝到新电脑上，只需要将旧电脑上的group.com.apple.notes目录全部拷贝到新电脑上，然后重新打开备忘录即可。
+拷贝命令为：“cd /Users/zdns/Library/Group\ Containers; scp -r xxx@192.168.1.3:"/Users/xxx/Library/Group\ Containers/group.com.apple.notes" .”。
