@@ -25,6 +25,10 @@ alias cc='git log -1 --pretty=format:%h | pbcopy'
 
 # Xcode
 
+```
+xcode-select --install
+```
+
 手动安装Command Tools，去官网下载安装；
 
 # Homebew
