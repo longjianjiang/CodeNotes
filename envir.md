@@ -13,6 +13,16 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
 ```
 
+$> vim ~/.zshrc
+
+```
+# application alias
+
+alias vs='open -a "Visual Studio Code"'
+alias cc='git log -1 --pretty=format:%h | pbcopy'
+
+```
+
 # Xcode
 
 手动安装Command Tools，去官网下载安装；
