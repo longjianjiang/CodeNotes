@@ -44,7 +44,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-scripts/DrawIt'
 call plug#end()
 
 map <F3> :NERDTreeMirror<CR>
-map <F3> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>图片及视频链接收藏
