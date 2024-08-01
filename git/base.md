@@ -43,19 +43,25 @@ when we generate more public key for different host, we need a config file use `
 below is config file:
 
 ```
-# Github
-Host github.com 
-	HostName github.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa
- 	user longjianjiang
+# Gitlab 
+Host gitlab.ximalaya.com 
+HostName gitlab.ximalaya.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+user jianglongjian 
+HostkeyAlgorithms +ssh-rsa  # 使 openssh 支持 rsa 算法
+PubkeyAcceptedAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
 
-# Coding
-Host git.coding.net
-	HostName git.coding.net
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/id_rsa_coding
-	user longjianjiang
+# Github 
+Host github.com 
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_github
+user longjianjiang
+HostkeyAlgorithms +ssh-rsa  
+PubkeyAcceptedAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
 ```
 
 then we need set ssh agent to add private key:

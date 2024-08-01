@@ -20,8 +20,28 @@ chsh -s /bin/zsh
 # Homebew
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+curl -fsSL https://raw.githubusercontent.com 过程中，速度会很慢，尝试修改hosts。同时尝试修改dns服务器，8.8.8.8。
+
+```
+sudo vim /etc/hosts;
+
+// 添加以下
+
+185.199.108.133 raw.githubusercontent.com
+185.199.109.133 raw.githubusercontent.com
+185.199.110.133 raw.githubusercontent.com
+185.199.111.133 raw.githubusercontent.com
+
+199.232.68.133 raw.githubusercontent.com
+199.232.68.133 user-images.githubusercontent.com
+199.232.68.133 avatars2.githubusercontent.com
+199.232.68.133 avatars1.githubusercontent.com
+```
+
+[https://brew.sh/](https://brew.sh/)
 
 # ruby
 
