@@ -53,6 +53,12 @@ sudo vim /etc/hosts;
 
 [https://brew.sh/](https://brew.sh/)
 
+安装vim，系统自带的vim不支持py3，导致ultisnip无法生效。
+
+```
+brew install vim;
+```
+
 # ruby
 
 `sudo gem install fastlane -NV` 需要新版本的ruby，所以需要安装rvm来安装一个新版本的ruby。
@@ -75,7 +81,18 @@ rvm remove 2.6.3
 
 # Pod
 
+M2直接安装pods，报以下错误：
+ERROR:  Error installing cocoapods:
+	The last version of drb (>= 0) to support your Ruby & RubyGems was 2.0.6. Try installing it with `gem install drb -v 2.0.6` and then running the current command again
+	drb requires Ruby version >= 2.7.0. The current ruby version is 2.6.10.210.
+
+需要先安装新版本ruby，命令如下：
+
 ```
+brew uninstall --ignore-dependencies openssl@3
+brew reinstall openssl@1.1
+rvm install 3.0.0
+
 sudo gem install cocoapods
 ```
 
