@@ -88,6 +88,8 @@ ERROR:  Error installing cocoapods:
 
 需要先安装新版本ruby，命令如下：
 
+[ref](https://github.com/rvm/rvm/issues/5285)
+
 ```
 brew uninstall --ignore-dependencies openssl@3
 brew reinstall openssl@1.1
@@ -95,6 +97,7 @@ rvm install 3.0.0
 
 sudo gem install cocoapods
 ```
+
 
 # 隐藏文件
 
