@@ -65,43 +65,38 @@ brew install vim;
 
 # ruby
 
-`sudo gem install fastlane -NV` 需要新版本的ruby，所以需要安装rvm来安装一个新版本的ruby。
+`sudo gem install fastlane -NV` 需要新版本的ruby，所以需要安装rbenv来安装一个新版本的ruby。
 
-安装rvm：
-
-```
-curl -L get.rvm.io | bash -s stable
-```
-
-安装指定版本的ruby：
+安装rbenv：
 
 ```
-rvm list known
-rvm install 2.6.3
-rvm use 2.6.3 --default
-rvm list
-rvm remove 2.6.3
+brew install rbenv
+
+# set up your shell to load rbenv
+# writing ~/.zprofile: now configured for rbenv
+rbenv init
+
+# list latest stable versions:
+rbenv install -l
+
+# list all local versions:
+rbenv install -L
+
+# install a Ruby version:
+rbenv install 3.4.9
+
+# set global ruby version
+rbenv global 3.4.9
+
+# open new window, check ruby version
+ruby -v
 ```
 
 # Pod
 
-M2直接安装pods，报以下错误：
-ERROR:  Error installing cocoapods:
-	The last version of drb (>= 0) to support your Ruby & RubyGems was 2.0.6. Try installing it with `gem install drb -v 2.0.6` and then running the current command again
-	drb requires Ruby version >= 2.7.0. The current ruby version is 2.6.10.210.
-
-需要先安装新版本ruby，命令如下：
-
-[ref](https://github.com/rvm/rvm/issues/5285)
-
 ```
-brew uninstall --ignore-dependencies openssl@3
-brew reinstall openssl@1.1
-rvm install 3.0.0
-
 sudo gem install cocoapods
 ```
-
 
 # 隐藏文件
 
@@ -129,7 +124,6 @@ export PATH="$PATH:/YOUR_FLUTTER_DIR/flutter/bin"
 
 [pb convert objc](https://developers.google.com/protocol-buffers/docs/reference/objective-c-generated)
 
-xxx
 
 # 备忘录
 
