@@ -138,3 +138,24 @@ xxx
 
 所以，我们想要批量将旧电脑上的备忘录拷贝到新电脑上，只需要将旧电脑上的group.com.apple.notes目录全部拷贝到新电脑上，然后重新打开备忘录即可。
 拷贝命令为：“cd /Users/zdns/Library/Group\ Containers; scp -r xxx@192.168.1.3:"/Users/xxx/Library/Group\ Containers/group.com.apple.notes" .”。
+
+# node js
+
+download url：https://nodejs.org/en/download
+
+```
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 24
+
+# Verify the Node.js version:
+node -v # Should print "v24.15.0".
+
+# Verify npm version:
+npm -v # Should print "11.12.1".
+```
